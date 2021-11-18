@@ -1,0 +1,181 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  overflow: hidden;
+}
+#canvasDiv {
+  width: 80vw;
+  height: 80vh;
+  resize: both;
+  border: 1px black solid;
+  overflow: hidden;
+  background-color: #808080;
+  padding: 5px;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  color: #fff;
+}
+
+.dropdown span{
+  color: white;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(0,0,0,0.2);
+}
+.dropdown-content a:hover .dropdownIcons {
+  color: #000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#filledCheck {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.slidecontainer {
+  position: absolute;
+  display: none;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #333;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.slidecontainerEraser {
+  position: absolute;
+  display: none;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #333;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 250px;
+  height: 5px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #fcfcfc;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slidecontainer:hover, .navbar a:first-child:hover + .slidecontainer{
+  display: block;
+}
+
+.slidecontainerEraser:hover, .navbar #eraserIcon:hover ~ .slidecontainerEraser {
+  display: block;
+}
+
+#colorPicker {
+  visibility: hidden;
+  position: absolute; 
+  z-index:1;
+  top: 30px; 
+  left: 30px;
+}
+.colorPickerContainer {
+  position: relative;
+}
+
+#bgColorPicker {
+  visibility: hidden;
+  position: absolute; 
+  z-index:1;
+  top: 30px; 
+  left: 80px;
+}
+.bgColorPickerContainer {
+  position: relative;
+}
+
+.colorIndicator {
+  position: absolute;
+}
+
+.currentColors {
+  float: right;
+  margin-right: 50px;
+  padding: 14px 16px;
+}

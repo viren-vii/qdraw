@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="navbar">
+      <a href="#"><span class="material-icons">brush</span></a>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="0" class="slider" id="slider">
+      </div>
+      <a id="eraserIcon" href="javascript:changeMode('e');"><span class="material-icons">clear</span></a>
+      <div class="slidecontainerEraser">
+        <input type="range" min="1" max="100" value="0" class="slider" id="sliderEraser">
+      </div>
+      <div class="dropdown">
+        <a class="dropbtn" href="#home"><span class="material-icons">category</span></a>
+        <div class="dropdown-content">
+          <div id="filledCheck">
+            <input type="checkbox" id="filled" name="filled" value="filled">
+            <label for="filled"> Filled </label><br>
+          </div>
+          <a href="#"><span class="dropdownIcons material-icons">crop_square</span></a>
+          <a href="#"><span class="dropdownIcons material-icons">radio_button_unchecked</span></a>
+          <a href="#"><span class="dropdownIcons material-icons">change_history</span></a>
+        </div>
+      </div>
+      <div class="colorPickerContainer">
+        <a href="#" id="activeColor"><span class="material-icons">palette</span></a>
+        <input type="color" id="colorPicker" name="colorPicker" title="Pick a colour"/>
+      </div>
+      <div class="bgColorPickerContainer">
+        <a href="#" id="bgActiveColor"><span class="material-icons">web_asset</span></a>
+        <input type="color" id="bgColorPicker" name="bgColorPicker" title="Pick a colour"/>
+      </div>
+      <a href="#" id="clear-canvas"><span class="material-icons">layers_clear</span></a>
+      <div class="currentColors">
+        <span class="colorIndicator bgCurrentColor material-icons" style="color: #fff; font-size:30px;">circle</span>  
+        <span class="colorIndicator currentColor material-icons" style="color: #000;">circle</span>
+      </div>
+    </div>
+
+    <div id="canvasDiv">
+      <canvas id="canvas" height="300" width="300"></canvas>
+    </div>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="board.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+  </body>
+</html>
